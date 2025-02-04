@@ -88,13 +88,13 @@ void makeRobotMove(List<List<String>> board) {
 }
 
 bool checkWin(List<List<String>> board, String player) {
-  // Проверка строк и столбцов
+  
   for (int i = 0; i < board.length; i++) {
     if (board[i].every((cell) => cell == player)) return true;
     if (board.every((row) => row[i] == player)) return true;
   }
 
-  // Проверка диагоналей
+  
   if (board.every((row) => row[board.indexOf(row)] == player)) return true;
   if (board.every((row) => row[board.length - 1 - board.indexOf(row)] == player)) return true;
 
